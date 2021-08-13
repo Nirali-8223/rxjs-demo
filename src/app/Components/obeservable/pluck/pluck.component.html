@@ -1,0 +1,33 @@
+<div class="container-fluid row mt-3 ml-5">
+    <h3>Pluck Operator Example</h3>
+</div>
+<br>
+<br>
+
+<div class="container-fluid row mt-3 ml-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+              <strong>Ex-01 - </strong>Get the property value from object
+            </div>
+            <div class="card-body">
+              <div *ngFor="let item of list" class= 'ObservableUl'>
+                  {{item}}
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Ex-02 - </strong> Get the nested property by pluck operator.
+            </div>
+            <div class="card-body">
+                <div *ngFor="let item of list2"  class= 'ObservableUl'>
+                    {{item}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

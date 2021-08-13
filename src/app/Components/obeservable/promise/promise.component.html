@@ -1,0 +1,89 @@
+<h1 [appRedColor]="name">{{name}}</h1>
+
+<h4 class="container-fluid mt-3 ml-5">Promise Example</h4>
+<div class="container-fluid d-flex mt-3 ml-2">
+  <div class="col-sm-1">
+    <button (click)="buyMobile()" class="btn btn-primary">Buy Mobile</button>
+  </div>
+  
+  <div class="col-sm-1" *ngIf="isLoadingData" disabled >
+    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+    <span>Loading...</span>
+  </div>
+  
+  <h3 class="col-md-6" >{{mobileRes}}</h3>
+</div>
+
+<h6 class="container-fluid mt-3 ml-5">Fetch data From API Using Promise</h6>
+
+<div class="container-fluid mt-3 ml-2">
+  <div class="col-sm-1">
+    <button (click)="showPost()" class="btn btn-primary">Show Post</button>
+  </div>
+
+<div class ="col-sm-12 mt-3" *ngIf="posts.length>0">
+  <p-table [value]="posts">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-post>
+        <tr>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>
+</div>
+
+<h6 class="container-fluid mt-3 ml-5">Fetch data From API Using Async & Await</h6>
+
+<div class="container-fluid mt-3 ml-2">
+  <div class="col-sm-1">
+    <button (click)="showComment()" class="btn btn-primary">Show Comments</button>
+  </div>
+
+<div class ="col-sm-12 mt-3" *ngIf="comments.length>0">
+  <p-table [value]="comments">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Description</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-comment>
+        <tr>
+            <td>{{comment.name}}</td>
+            <td>{{comment.email}}</td>
+            <td>{{comment.body}}</td>
+        </tr>
+    </ng-template>
+  </p-table>
+</div>
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="buyMobile">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Buy Mobile</h5>
+          <button type="button" class="close btn btn-danger" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>                                 
+        </div>
+        <div class="modal-body">
+          <p>Are you Interested for buy new Latest Mobile?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="onMobile()">Yes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+        </div>
+      </div>
+    </div>
+</div>

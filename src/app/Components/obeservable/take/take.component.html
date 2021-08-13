@@ -1,0 +1,92 @@
+<div class="container-fluid row mt-3 ml-5">
+    <h3>Take, TakeUntil, TakeWhile & TakeLast</h3>  
+</div>
+<br>
+<br>
+
+<div class="container-fluid row mt-3 ml-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+              <strong>Ex-01 - </strong>Fetch the data from Albums Api and show the first 5 records by using Take Operator.
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let album of takeAlbumData">
+                        <tr>
+                            <td>{{album.id}}</td>
+                            <td>{{album.title}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Ex-02 - </strong>Fetch the data from Albums Api and show the last 5 records by using TakeLast Operator.
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let album of takeLastAlbumData">
+                        <tr>
+                            <td>{{album.id}}</td>
+                            <td>{{album.title}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid row mt-3 ml-5">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+              <strong>Ex-03 - </strong> Show the data by using TakeUntil Operator.
+            </div>
+            <div class="card-body">
+               <ul id="elContainer"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <strong>Ex-04 - </strong>Fetch the data from Albums Api and show data by using TakeWhile Operator.
+            </div>
+            <div class="card-body">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor="let album of takeWhileAlbumData">
+                        <tr>
+                            <td>{{album.id}}</td>
+                            <td>{{album.title}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
